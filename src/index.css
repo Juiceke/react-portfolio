@@ -56,4 +56,5 @@ body {
 li {
   display: inline-block;
   margin-right: 40px;
+  cursor: pointer;
 }
