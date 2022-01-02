@@ -27,6 +27,27 @@ body {
   list-style-type: none;
 }
 
+.header {
+  background-color: gray;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid beige;
+}
+.name {
+  text-align: left;
+  flex: 2;
+}
+.header-nav {
+  text-align: center;
+  background-color: gray;
+  flex: 1;
+}
+.header-list {
+  font-size: large;
+}
+
 .footer-list {
   list-style-type: none;
   padding: 0;
