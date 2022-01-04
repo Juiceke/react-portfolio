@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
 }
 /* some styling for the footer */
 .footer {
@@ -34,6 +35,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid beige;
+  min-width: 100%;
 }
 .name {
   text-align: left;
@@ -57,4 +59,10 @@ li {
   display: inline-block;
   margin-right: 40px;
   cursor: pointer;
+}
+
+/* styling for images */
+.project-images {
+  width: 600px;
+  border: solid;
 }
