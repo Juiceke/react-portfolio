@@ -1,21 +1,20 @@
 import React, { useState } from "react";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-// import the Contact section
-// import the Resume section
+import Contact from "./components/Contact";
 
 function App() {
   const [sections] = useState([
     {
+      name: "About Me",
+      description: "About Me!",
+    },
+    {
       name: "Portfolio",
-      project1: "This is a test description for the first project!",
-      project2: "This is a test description for the second project!",
-      project3: "This is a test description for the third project!",
-      project4: "This is a test description for the fourth project!",
-      project5: "This is a test description for the fifth project!",
-      project6: "This is a test description for the sixth project!",
+      description: "Some Projects I've done over the last few months!",
     },
   ]);
 
@@ -32,12 +31,21 @@ function App() {
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
       ></Header>
-      <About></About>
-      <Portfolio
-        currentSection={currentSection}
-        section={currentSection.name}
-      ></Portfolio>
-      <main>yo{/* Actual content */}</main>
+
+      <main>
+        {!contactSelected ? (
+          <>
+            <About></About>
+            <Portfolio
+              currentSection={currentSection}
+              section={currentSection.name}
+            ></Portfolio>
+          </>
+        ) : (
+          <Contact></Contact>
+        )}
+        {/* Actual content */}
+      </main>
       <Footer></Footer>
     </div>
   );

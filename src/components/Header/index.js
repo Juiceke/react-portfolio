@@ -18,8 +18,6 @@ function Header(props) {
       <h1 className="name">David Herrell</h1>
       <nav className="header-nav">
         <ul className="header-list">
-          <li id="about">About Me</li>
-          <li id="portfolio">Portfolio</li>
           {sections.map((sections) => (
             <li
               className={`${currentSection.name === sections.name}`}
@@ -35,7 +33,10 @@ function Header(props) {
               </span>
             </li>
           ))}
-          <li id="contact">Contact</li>
+          <li id="contact">
+            <span onClick={() => setContactSelected(true)}>Contact</span>
+          </li>
+          <li id="resume">Resume</li>
         </ul>
       </nav>
     </header>

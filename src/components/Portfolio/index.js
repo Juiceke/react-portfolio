@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import photos of my projects
 
 function Portfolio({ section }) {
   const [currentPhoto, setCurrentPhoto] = useState(false);
@@ -39,7 +38,6 @@ function Portfolio({ section }) {
 
   const currentPhotos = photos.filter((photo) => photo.section === section);
 
-  //   const { currentSection } = props;
   return (
     <section>
       {currentPhotos.map((image, i) => (

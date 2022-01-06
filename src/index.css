@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: lightgray;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 /* some styling for the footer */
 .footer {
@@ -35,7 +37,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid beige;
-  min-width: 100%;
+  width: 100%;
 }
 .name {
   text-align: left;
