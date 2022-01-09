@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 function Portfolio({ section }) {
-  const [currentPhoto, setCurrentPhoto] = useState(false);
-
   const [photos] = useState([
     {
       name: "Run Buddy",
@@ -19,14 +17,14 @@ function Portfolio({ section }) {
     {
       name: "Work Day Scheduler",
       section: "Portfolio",
-      description: "This is the second project on the list",
+      description: "This is the third project on the list",
       link: "https://juiceke.github.io/work-schedule/",
     },
     {
-      name: "Weather Dashboard",
+      name: "Crypto Watcher",
       section: "Portfolio",
       description: "This is the second project on the list",
-      link: "https://juiceke.github.io/Weather-Dashboard/",
+      link: "https://john-harris-iii.github.io/crypto-watcher/",
     },
     {
       name: "My Tech Blog",
@@ -39,10 +37,10 @@ function Portfolio({ section }) {
   const currentPhotos = photos.filter((photo) => photo.section === section);
 
   return (
-    <section>
+    <section className="Portfolio">
       {currentPhotos.map((image, i) => (
-        <div key={image.name}>
-          <h3>{image.name}</h3>
+        <div className="Project" key={image.name}>
+          <h3 className="Project-name">{image.name}</h3>
           <a href={image.link}>
             <img
               src={require(`../../assets/large/${section}/${i}.jpg`)}

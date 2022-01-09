@@ -13,6 +13,10 @@ function Header(props) {
     document.title = currentSection.name;
   }, [currentSection]);
 
+  function titleChange() {
+    document.title = "Contact";
+  }
+
   return (
     <header className="header">
       <h1 className="name">David Herrell</h1>
@@ -34,8 +38,16 @@ function Header(props) {
             </li>
           ))}
           <li id="contact">
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+            <span
+              onClick={() => {
+                setContactSelected(true);
+                titleChange();
+              }}
+            >
+              Contact
+            </span>
           </li>
+
           <li id="resume">Resume</li>
         </ul>
       </nav>

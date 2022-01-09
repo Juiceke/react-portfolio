@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -6,55 +16,63 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: lightgray;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  /* overflow-x: hidden; */
+  /* overflow-y: scroll; */
+  height: 100%;
+  position: relative;
+}
+
+.main-container {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  display: block;
+  position: relative;
 }
 /* some styling for the footer */
 .footer {
-  display: block;
-  padding: 20px;
-  height: 60px;
   width: 100%;
+  bottom: 0;
+  position: absolute;
 }
 
 .footer-nav {
   background-color: beige;
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid;
   text-align: center;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  /* position: fixed; */
   height: 60px;
   width: 100%;
   list-style-type: none;
 }
 
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Some styling for the header */
 .header {
   background-color: gray;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid beige;
+  border-bottom: 1px solid;
   width: 100%;
 }
 .name {
   text-align: left;
-  flex: 2;
+  flex: 1;
+  padding-left: 1rem;
 }
 .header-nav {
-  text-align: center;
   background-color: gray;
   flex: 1;
+  text-align: right;
 }
 .header-list {
   font-size: large;
-}
-
-.footer-list {
-  list-style-type: none;
-  padding: 0;
+  font-weight: bold;
 }
 
 li {
@@ -63,8 +81,86 @@ li {
   cursor: pointer;
 }
 
-/* styling for images */
+/* styling for portfolio */
+.Portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+}
+
+.Project-name {
+  text-align: center;
+}
+
+.Project {
+  overflow: hidden;
+  /* object-fit: cover; */
+  width: 200px;
+  height: 210px;
+}
+
 .project-images {
-  width: 600px;
   border: solid;
+  width: 200px;
+  height: 120px;
+}
+
+/* styling for the About me page */
+
+.description {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* styling for Contact page*/
+
+.contact-me {
+  padding-left: 20px;
+}
+#contact-form {
+  height: 600px;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0px;
+  padding: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+label {
+  height: 20px;
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: right;
+  margin-right: 15px;
+  float: left;
+}
+
+input {
+  height: 20px;
+  width: 300px;
+  border: 1px solid #000;
+  margin-top: 10px;
+}
+textarea {
+  height: 150px;
+  width: 300px;
+  border: 1px solid #000;
+  margin-top: 10px;
+  resize: none;
+}
+/* styling for very small screens */
+@media (max-width: 450px) {
+  .Portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
 }

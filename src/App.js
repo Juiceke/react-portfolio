@@ -23,7 +23,7 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
 
   return (
-    <div>
+    <div className="main-container">
       <Header
         sections={sections}
         setCurrentSection={setCurrentSection}
