@@ -11,7 +11,7 @@ function Footer(props) {
           <li>Resume</li>
           <li>
             {/* add a professional twitter link later */}
-            <a href="https://twitter.com">Twitter</a>
+            <a href="https://twitter.com/JUlCEKE">Twitter</a>
           </li>
         </ul>
       </nav>

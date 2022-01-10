@@ -81,6 +81,10 @@ li {
   cursor: pointer;
 }
 
+.navActive {
+  color: #fafafa;
+}
+
 /* styling for portfolio */
 .Portfolio {
   display: flex;

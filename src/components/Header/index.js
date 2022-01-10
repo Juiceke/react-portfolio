@@ -24,7 +24,11 @@ function Header(props) {
         <ul className="header-list">
           {sections.map((sections) => (
             <li
-              className={`${currentSection.name === sections.name}`}
+              className={`${
+                currentSection.name === sections.name &&
+                !contactSelected &&
+                "navActive"
+              } `}
               key={sections.name}
             >
               <span
@@ -37,7 +41,7 @@ function Header(props) {
               </span>
             </li>
           ))}
-          <li id="contact">
+          <li id="contact" className={`${contactSelected && "navActive"}`}>
             <span
               onClick={() => {
                 setContactSelected(true);
