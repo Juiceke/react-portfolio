@@ -43,7 +43,7 @@ function Contact() {
   };
 
   return (
-    <section>
+    <section className="contact-section">
       <h1 data-testid="h1tag" className="contact-me">
         Contact me
       </h1>

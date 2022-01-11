@@ -8,7 +8,9 @@ function Footer(props) {
           <li>
             <a href="https://github.com/Juiceke">Github</a>
           </li>
-          <li>Resume</li>
+          <a href="https://LinkedIn.com">
+            <li>LinkedIn</li>
+          </a>
           <li>
             {/* add a professional twitter link later */}
             <a href="https://twitter.com/JUlCEKE">Twitter</a>
